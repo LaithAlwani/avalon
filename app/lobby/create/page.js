@@ -23,7 +23,7 @@ export default function CreateGamePage() {
     if (res.ok) {
       const data = await res.json();
       toast.success(data.message);
-      router.push(`/games/${data.gameRoom._id}`);
+      router.push(`/lobby/${data.gameRoom._id}`);
     }
   };
 

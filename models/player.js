@@ -14,6 +14,9 @@ const playerSchema = new Schema(
       type: String,
       required: true,
     },
+    ability: {
+      type: String,
+    },
   },
   { timestamps: true }
 );

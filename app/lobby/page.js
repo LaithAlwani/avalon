@@ -42,7 +42,7 @@ export default function GamesPage() {
   };
 
   const deleteRoom = async (roomId) => {
-    await fetch("/api/game/delete", {
+    await fetch(`/api/game/${roomId}/delete`, {
       method: "POST",
       body: JSON.stringify({ roomId }),
     });

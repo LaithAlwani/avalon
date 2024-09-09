@@ -118,7 +118,7 @@ nav .cl-avatarBox {
 .hero .img {
   display: block;
   width: 100%;
-  height: 100svh;
+  height: 50svh;
   object-fit: cover;
 }
 
@@ -189,7 +189,7 @@ nav .cl-avatarBox {
 }
 
 .btn:hover {
-  background-color: var(--red);
+  background-color: var(--yellow);
   color: #fff;
 }
 
@@ -313,9 +313,11 @@ nav .cl-avatarBox {
 .cult {
   border: 5px solid var(--yellow);
 }
+
 .sailor {
   border: 5px solid var(--blue);
 }
+
 .pirate {
   border: 5px solid var(--red);
 }

@@ -1,4 +1,3 @@
-import { pusherServer } from "@/lib/pusher";
 import connectToDB from "@/utils/database";
 import { NextResponse } from "next/server";
 import GameRoom from "@/models/gameRoom";
@@ -18,7 +17,6 @@ export async function POST(req) {
       player.role = null;
       gameRoom.players.push(player);
       await gameRoom.save();
-      await pusherServer.trigger(roomId, "player-joined", player);
       return new NextResponse(JSON.stringify(gameRoom), { status: 201 });
     } else {
       return new NextResponse(JSON.stringify(gameRoom), { status: 201 });

@@ -7,7 +7,15 @@ export default function Home() {
     <>
       <div className="hero">
         <Image
-          src="/box.webp"
+          src="/loyals.webp"
+          alt="hero"
+          width={0}
+          height={0}
+          sizes="100vw"
+          className="img"
+        />
+        <Image
+          src="/minions.webp"
           alt="hero"
           width={0}
           height={0}
