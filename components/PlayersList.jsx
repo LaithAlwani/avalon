@@ -25,9 +25,9 @@ export default function PlayersList({ players, currentPlayer }) {
     <ul>
       {currentPlayer && (
         <li>
-          {" "}
-          <img src={currentPlayer?.avatar} alt="" className="avatar" /> {currentPlayer?.username} (
-          {currentPlayer.role}) {currentPlayer.ability && `(${currentPlayer?.ability})`}
+          <img src={currentPlayer?.avatar} alt="" className="avatar" /> {currentPlayer?.username}
+          {currentPlayer.role && ` (${currentPlayer.role})`}{" "}
+          {currentPlayer.ability && `(${currentPlayer?.ability})`}
         </li>
       )}
       {players &&
@@ -39,7 +39,7 @@ export default function PlayersList({ players, currentPlayer }) {
               <img src={player.avatar} alt="" className="avatar" />
               <span>
                 {player?.username}
-                {isVisble(player)}
+                {isVisble(player).toUpperCase()}
               </span>
             </li>
           ))}

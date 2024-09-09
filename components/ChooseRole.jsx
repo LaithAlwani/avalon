@@ -1,33 +1,36 @@
+import Image from "next/image";
 import { FaUser, FaUserSecret } from "react-icons/fa6";
 
 export default function ChooseRole({ chooseRole }) {
   return (
     <>
-      <h3>please choose a role</h3>
-      <span onClick={() => chooseRole("loyal")}>
-        <FaUser size={128} color="#47a5cb" />
-      </span>
-      <span onClick={() => chooseRole("minion")}>
-        <FaUserSecret size={128} color="#984141" />
-      </span>
-      <span onClick={() => chooseRole("loyal","merlin")}>
-        <h3>Merlin</h3>
-      </span>
-      <span onClick={() => chooseRole("minion","assassin")}>
-        <h3>assassin</h3>
-      </span>
-      <span onClick={() => chooseRole("minion","mordred")}>
-        <h3>Mordred</h3>
-      </span>
-      <span onClick={() => chooseRole("minion","morgana")}>
-        <h3>Morgana</h3>
-      </span>
-      <span onClick={() => chooseRole("minion","oberon")}>
-        <h3>Oberon</h3>
-      </span>
-      <span onClick={() => chooseRole("loyal","percival")}>
-        <h3>Percival</h3>
-      </span>
+      <h2>please choose a role</h2>
+      <div className="characters-grid">
+        <div className="character-img-wrapper" onClick={() => chooseRole("loyal")}>
+          <Image src="/char/loyal_servent.webp" alt="loyal" fill />
+        </div>
+        <div className="character-img-wrapper" onClick={() => chooseRole("minion")}>
+          <Image src="/char/minion_of_mordred.webp" alt="minion" fill />
+        </div>
+        <div className="character-img-wrapper" onClick={() => chooseRole("loyal", "merlin")}>
+          <Image src="/char/merlin.webp" alt="merlin" fill />
+        </div>
+        <div className="character-img-wrapper" onClick={() => chooseRole("minion", "assassin")}>
+          <Image src="/char/assassin.webp" alt="assassin" fill />
+        </div>
+        <div className="character-img-wrapper" onClick={() => chooseRole("loyal", "percival")}>
+          <Image src="/char/percival.webp" alt="percival" fill />
+        </div>
+        <div className="character-img-wrapper" onClick={() => chooseRole("minion", "morgana")}>
+          <Image src="/char/morgana.webp" alt="morgana" fill />
+        </div>
+        <div className="character-img-wrapper" onClick={() => chooseRole("minion", "mordred")}>
+          <Image src="/char/mordred.webp" alt="mordred" fill />
+        </div>
+        <div className="character-img-wrapper" onClick={() => chooseRole("minion", "oberon")}>
+          <Image src="/char/oberon.webp" alt="oberon" fill />
+        </div>      
+      </div>
     </>
   );
 }

@@ -9,7 +9,6 @@ import PlayersList from "@/components/PlayersList";
 
 import ChooseRole from "@/components/ChooseRole";
 
-
 export default function GamePage({ params }) {
   const router = useRouter();
   const [gameRoom, setGameRoom] = useState({});
@@ -35,7 +34,6 @@ export default function GamePage({ params }) {
       router.push("/lobby");
     }
   };
-
 
   const customToast = (player, message, duration) => {
     toast.custom(
@@ -87,8 +85,8 @@ export default function GamePage({ params }) {
     pusherClient.bind("room-deleted", (gameRoom) => {
       toast.success("room has been delete", { id: gameRoom._id });
       router.push("/lobby");
-    }); 
-    
+    });
+
     pusherClient.bind("game-started", (gameRoom) => {
       updateRoom();
       toast.success(`${gameRoom.name} has started!`, { id: gameRoom._id });
@@ -102,14 +100,13 @@ export default function GamePage({ params }) {
   return (
     <section>
       <h2>{gameRoom.name}</h2>
-      {currentPlayer && !currentPlayer?.role && (
-        <div className="modle">
-          <ChooseRole chooseRole={chooseRole} />
-        </div>
+      <MdOutlineExitToApp size={28} className="btn-leave" onClick={leaveRoom} />
+      {isLoaded && !currentPlayer?.role ? (
+        <ChooseRole chooseRole={chooseRole} />
+      ) : (
+        <PlayersList players={gameRoom.players} currentPlayer={currentPlayer} />
       )}
 
-      <MdOutlineExitToApp size={28} className="btn-leave" onClick={leaveRoom} />
-      <PlayersList players={gameRoom.players} currentPlayer={currentPlayer} />
     </section>
   );
 }
