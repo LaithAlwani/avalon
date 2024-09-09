@@ -20,9 +20,6 @@
   html {
     color-scheme: dark;
   }
-  .logo {
-    filter: invert(1) drop-shadow(0 0 0.3rem #ffffff70);
-  }
 }
 
 * {
@@ -102,14 +99,6 @@ nav .cl-avatarBox {
   height: 100%;
 }
 
-.inverted-logo {
-  filter: invert(1) drop-shadow(0 0 0.3rem #ffffff70);
-}
-
-@media (prefers-color-scheme: dark) {
-  
-}
-
 .hero {
   position: relative;
   width: 100vw;
@@ -150,7 +139,6 @@ nav .cl-avatarBox {
   border: none;
   padding: 0.5rem 1rem;
   border-radius: 0.25rem;
-  /* font-weight: 500; */
   cursor: pointer;
   transition: background-color 0.25s;
   background-color: var(--blue);
@@ -286,57 +274,6 @@ nav .cl-avatarBox {
     custom-exit-animation;
 }
 
-.current-player {
-  position: fixed;
-  top: 6rem;
-  right: 1rem;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 0.5rem;
-  cursor: pointer;
-}
-
-.current-player > * {
-  margin: 0;
-}
-
-.current-player-img-wrapper {
-  position: relative;
-  width: 72px;
-  height: 72px;
-}
-.current-player-img-wrapper img {
-  width: 100%;
-  border-radius: 50%;
-}
-.cult {
-  border: 5px solid var(--yellow);
-}
-
-.sailor {
-  border: 5px solid var(--blue);
-}
-
-.pirate {
-  border: 5px solid var(--red);
-}
-
-.event-card {
-  margin-bottom: 3rem;
-  cursor: pointer;
-}
-
-.event-card h3 {
-  margin: 0;
-}
-
-.gun-counter {
-  display: flex;
-  gap: 2rem;
-  margin-left: auto;
-  font-size: 1.2rem;
-}
 
 @keyframes custom-animation {
   0% {

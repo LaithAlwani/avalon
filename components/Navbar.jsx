@@ -9,7 +9,8 @@ export default function Navbar() {
   return (
     <nav>
       <Link href="/">
-        <h3 className={`logo ${pathname === "/" ? "inverted-logo" : ""}`}>Avalon</h3>
+        <img src="/box.webp" alt="" style={{width:"64px", borderRadius:"0.5rem"}} />
+        {/* <h3 className={`logo ${pathname === "/" ? "white-logo" : ""}`}>Avalon</h3> */}
       </Link>
       <div className="navlinks">
         <UserButton />
