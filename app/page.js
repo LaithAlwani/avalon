@@ -7,7 +7,7 @@ export default function Home() {
     <>
       <div className="hero">
         <Image
-          src="https://funtails.de/wp-content/uploads/2022/09/feed-the-kraken-mobile-background-1.jpg"
+          src="/box.webp"
           alt="hero"
           width={0}
           height={0}
