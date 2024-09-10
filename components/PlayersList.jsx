@@ -72,7 +72,7 @@ const CurrentPlayer = ({ currentPlayer }) => {
   const [hidden, setHidden] = useState(true);
   return (
     <>
-      <div className={`current-player-container ${hidden ? "show" : ""}`}>
+      <div className={`current-player-container ${hidden ? "" : "show"}`}>
         {currentPlayer.ability && (
           <img
             src={`/char/${currentPlayer.ability}.webp`}
@@ -89,7 +89,7 @@ const CurrentPlayer = ({ currentPlayer }) => {
         )}
       </div>
       <span onClick={() => setHidden(!hidden)}>
-        {!hidden ? <FaEye size={32} /> : <FaEyeSlash size={32} />}
+        {hidden ? <FaEye size={32} /> : <FaEyeSlash size={32} />}
       </span>
     </>
   );
