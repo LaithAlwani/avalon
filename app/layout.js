@@ -18,14 +18,10 @@ export const metadata = {
     },
   ],
   icons: [
-    { rel: "apple-touch-icon", url: "/kraken.png" },
-    { rel: "icon", url: "/kraken.png" },
+    { rel: "apple-touch-icon", url: "/box.webp" },
+    { rel: "icon", url: "/box.webp" },
   ],
 };
-
-// export const metadata = {
-
-// };
 
 export default function RootLayout({ children }) {
   return (
