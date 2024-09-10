@@ -3,6 +3,7 @@ import styles from "./page.module.css";
 import { Toaster } from "react-hot-toast";
 import { ClerkProvider } from "@clerk/nextjs";
 import Navbar from "@/components/Navbar";
+import PwaPrompt from "@/components/PwaPrompt";
 
 export const metadata = {
   title: "Avalon",
@@ -33,6 +34,7 @@ export default function RootLayout({ children }) {
         <body>
           <Toaster />
           <Navbar />
+          {/* <PwaPrompt /> */}
           <main className={styles.main}>{children}</main>
         </body>
       </html>

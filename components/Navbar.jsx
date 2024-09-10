@@ -7,7 +7,7 @@ import { usePathname } from "next/navigation";
 export default function Navbar() {
   const pathname = usePathname();
   return (
-    <nav>
+    <nav className={pathname === "/"? "fixed":""}>
       <Link href="/">
         <img src="/box.webp" alt="" style={{width:"64px", borderRadius:"0.5rem"}} />
         {/* <h3 className={`logo ${pathname === "/" ? "white-logo" : ""}`}>Avalon</h3> */}
