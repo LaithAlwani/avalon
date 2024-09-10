@@ -82,6 +82,7 @@ select {
 }
 
 nav {
+  
   padding: 1rem;
   display: flex;
   justify-content: space-between;
@@ -90,7 +91,6 @@ nav {
   margin-inline: auto;
   z-index: 1;
 }
-
 nav .cl-avatarBox {
   width: 3rem;
   height: 100%;
@@ -101,6 +101,26 @@ nav.fixed{
   top: 0;
   left: 0;
 }
+
+.pwa-prompt{
+  position: relative;
+  max-width: 325px;
+  margin-inline: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  padding-block: 1rem;
+  z-index: 99;
+}
+
+.pwa-prompt span{
+  position: absolute;
+  top: 0;
+  right: 0;
+  cursor: pointer;
+}
+
 .hero {
   position: relative;
   width: 100vw;
@@ -143,19 +163,20 @@ nav.fixed{
   border-radius: 2rem;
   cursor: pointer;
   transition: background-color 0.25s;
+  background: url("/btn-bg.webp");
   /* background-color: var(--blue); */
-  background: linear-gradient(
+  /* background: linear-gradient(
     140deg,
     rgba(255, 38, 4, 1) 19%,
     rgba(238, 114, 9, 1) 56%,
     rgba(238, 208, 26, 1) 96%
-  );
-  color: #fff;
+  ); */
+  color: #333;
   transition: all 0.5s ease-in-out;
-  font-size: 1rem;
+  font-weight: bold;
 }
 .btn:hover {
-  color: #333;
+  color: #fff;
 }
 
 .btn:disabled {

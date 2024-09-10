@@ -34,7 +34,7 @@ export default function RootLayout({ children }) {
         <body>
           <Toaster />
           <Navbar />
-          {/* <PwaPrompt /> */}
+          <PwaPrompt />
           <main className={styles.main}>{children}</main>
         </body>
       </html>
