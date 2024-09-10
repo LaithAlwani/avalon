@@ -64,7 +64,7 @@ export default function GamePage({ params }) {
       updateRoom();
       if (isLoaded) {
         if (user.id === player.id) {
-          toast.success(`joined Room`, { id: player.id });
+          toast.success(`Room Joined`, { id: player.id });
         } else {
           customToast(player, "has joined");
         }
@@ -75,7 +75,7 @@ export default function GamePage({ params }) {
       updateRoom();
       if (isLoaded) {
         if (user?.id === player.id) {
-          customToast(player, "you left the Room");
+          toast.success("you left the Room");
         } else {
           customToast(player, "has left");
         }

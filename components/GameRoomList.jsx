@@ -13,7 +13,7 @@ export default function GameRoomList({ gameRooms, joinRoom, deleteRoom, user }) 
                 <MdDeleteOutline className="btn-delete" onClick={() => deleteRoom(_id)} size={32} />
               )}
               <button onClick={() => joinRoom(_id)} className="btn join-btn">
-              Join <span>({players.length}/11)</span>
+              Join <span>({players.length}/10)</span>
               </button>
               {/* <button onClick={() => joinRoom(_id)} className="btn" disabled={gameStarted}>
                 {gameStarted ? "Started" : "Join"}

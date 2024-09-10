@@ -138,25 +138,30 @@ nav .cl-avatarBox {
   display: block;
   border: none;
   padding: 0.5rem 1rem;
-  border-radius: 0.25rem;
+  border-radius: 2rem;
   cursor: pointer;
   transition: background-color 0.25s;
-  background-color: var(--blue);
-  color: #f2f2f2;
+  /* background-color: var(--blue); */
+  background: linear-gradient(
+    140deg,
+    rgba(255, 38, 4, 1) 19%,
+    rgba(238, 114, 9, 1) 56%,
+    rgba(238, 208, 26, 1) 96%
+  );
+  color: #fff;
   transition: all 0.5s ease-in-out;
   font-size: 1rem;
+}
+.btn:hover {
+  color: #333;
 }
 
 .btn:disabled {
   cursor: not-allowed;
 }
-.btn:disabled:hover {
-  background-color: var(--blue);
-}
 
 .btn-delete {
   color: var(--red);
-  cursor: pointer;
 }
 
 .btn-leave {
@@ -165,21 +170,9 @@ nav .cl-avatarBox {
   left: 1rem;
   transform: scaleX(-1);
   color: var(--red);
+  cursor: pointer;
 }
 
-.btn-event {
-  position: fixed;
-  bottom: 1rem;
-  right: 0;
-  width: 100%;
-  background-color: var(--yellow);
-  color: #333;
-}
-
-.btn:hover {
-  background-color: var(--yellow);
-  color: #fff;
-}
 
 .icon {
   border-radius: 50%;
@@ -221,9 +214,9 @@ nav .cl-avatarBox {
 }
 .join-btn {
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
+  gap: 0.5rem;
 }
 .join-btn span {
   font-size: 0.7rem;
