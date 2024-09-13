@@ -14,7 +14,7 @@ export default function PlayersList({ players, currentPlayer }) {
             alt="loyal"
             style={{ width: "64px", borderRadius: "0.5rem" }}
           />
-          <img src="/char/loyal_symbol.webp" alt="loyal" style={{ width: "80px" }} />
+          <img src="/char/loyal_symbol.webp" alt="loyal" style={{ width: "72px" }} />
         </>
       );
     if (

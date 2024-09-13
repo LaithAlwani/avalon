@@ -73,9 +73,10 @@ export default function GamePage({ params }) {
 
     pusherClient.bind("player-left", (player) => {
       updateRoom();
+      console.log(player.id)
       if (isLoaded) {
         if (user?.id === player.id) {
-          toast.success("you left the Room");
+          toast.success("you left the Room", {id:player.id});
         } else {
           customToast(player, "has left");
         }
